@@ -26,7 +26,7 @@ namespace XamarinApp.Android
             var eBayIdText = FindViewById<TextView>(Resource.Id.eBayIdText);
 
             eBayIdText.Text = selectedItemId;
-
+            //testing
         }
     }
 }

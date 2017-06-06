@@ -7,6 +7,9 @@ using XamarinApp.Model;
 using System.Collections.Generic;
 using System;
 using XamarinApp.Android.Adapters;
+using Android.Content;
+using XamarinApp.Helpers;
+using System.Linq;
 
 namespace XamarinApp.Droid
 {
@@ -31,8 +34,22 @@ namespace XamarinApp.Droid
 
             eBayItemsListView = FindViewById<ListView>(Resource.Id.listView1);
             eBayItemsListView.Adapter = new eBayListAdapter(this, items);
+            eBayItemsListView.ItemClick += listView_ItemClick;
             eBayItemsListView.FastScrollEnabled = true;
+
+        }
+
+        void listView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var eBayItem = this.eBayItemsListView.GetItemAtPosition(e.Position).Cast<eBayItem>();
+
+            var detailActivity = new Intent(this, typeof(ItemDetailActivity));
+            detailActivity.PutExtra("selectedeBayId", eBayItem.itemId.FirstOrDefault());
+            StartActivity(detailActivity);
+            
         }
     }
+
+
 }
 

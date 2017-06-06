@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\AppConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ImageHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\MessagingCenterAlert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObjectTypeHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ServiceLocator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IBaseDataObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IMessageDialog.cs" />

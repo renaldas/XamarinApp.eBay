@@ -55,6 +55,7 @@ namespace XamarinApp.Android
                 specificationListView.Adapter = new SpecificationAdapter(this, ebayItemDetails.ItemSpecifics);
                 specificationListView.FastScrollEnabled = true;
             }
+
         }
     }
 }

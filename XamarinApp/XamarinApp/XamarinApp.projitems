@@ -17,6 +17,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IBaseDataObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IMessageDialog.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseDataObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\eBayDetailModels.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\eBayModels.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />

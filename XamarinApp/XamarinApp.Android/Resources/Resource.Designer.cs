@@ -91,32 +91,35 @@ namespace XamarinApp.Android
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f070005
+			public const int buyButton = 2131165189;
+			
 			// aapt resource value: 0x7f070002
 			public const int descriptionTextView = 2131165186;
 			
 			// aapt resource value: 0x7f070000
 			public const int imageView = 2131165184;
 			
-			// aapt resource value: 0x7f070007
-			public const int listView1 = 2131165191;
+			// aapt resource value: 0x7f070008
+			public const int listView1 = 2131165192;
 			
 			// aapt resource value: 0x7f070001
 			public const int nameTextView = 2131165185;
 			
-			// aapt resource value: 0x7f070005
-			public const int price = 2131165189;
+			// aapt resource value: 0x7f070006
+			public const int price = 2131165190;
 			
 			// aapt resource value: 0x7f070003
 			public const int priceTextView = 2131165187;
 			
-			// aapt resource value: 0x7f070006
-			public const int specificatonListView = 2131165190;
+			// aapt resource value: 0x7f070007
+			public const int specificatonListView = 2131165191;
 			
 			// aapt resource value: 0x7f070004
 			public const int title = 2131165188;
 			
-			// aapt resource value: 0x7f070008
-			public const int valueTextView = 2131165192;
+			// aapt resource value: 0x7f070009
+			public const int valueTextView = 2131165193;
 			
 			static Id()
 			{

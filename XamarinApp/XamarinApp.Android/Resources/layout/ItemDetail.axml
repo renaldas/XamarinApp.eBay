@@ -20,18 +20,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp" />
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:paddingLeft="15dp"
-        android:textAppearance="@style/heading_text"
-        android:gravity="left" 
-        android:id="@+id/price" />
+        android:layout_height="wrap_content">
+      <Button
+          android:id="@+id/buyButton"
+          android:layout_width="200dp"
+          android:layout_height="wrap_content"
+          android:paddingLeft="25dp"
+          android:text="BUY NOW!" /> 
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="10dp"
+          android:paddingRight="15dp"
+          android:textAppearance="@style/heading_text"
+          android:gravity="right" 
+          android:id="@+id/price" />
+    </LinearLayout>
+    
     <ListView
       android:minWidth="25px"
       android:minHeight="25px"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="wrap_content"
       android:id="@+id/specificatonListView" />
 </LinearLayout>

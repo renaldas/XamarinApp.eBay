@@ -15,8 +15,10 @@ namespace XamarinApp.Services
     {
 		public eBayDetailModels.Item GetItem(string id)
 		{
+            string appId = AppConfig.GetEBayAppName();
+
             var item = new eBayDetailModels.Item();
-            string requestUrl = "http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=Renaldas-e418-4e39-aab0-56f374ef9297&siteid=3&version=515&IncludeSelector=Compatibility,ItemSpecifics,%20Description&ItemID=" + id;
+            string requestUrl = "http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=" + appId + "&siteid=3&version=515&IncludeSelector=Compatibility,ItemSpecifics,%20Description&ItemID=" + id;
 
             WebClient client = new WebClient();
             var contents = client.DownloadString(requestUrl);

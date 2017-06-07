@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -37,7 +36,23 @@ namespace XamarinApp.Android
             //FindViewById<TextView>(Resource.Id.description).Text = ebayItemDetails.Description;
 
             FindViewById<TextView>(Resource.Id.title).Text = ebayItemDetails.Title;
-            FindViewById<TextView>(Resource.Id.price).Text = "PRICE " + ebayItemDetails.ConvertedCurrentPrice.Value + " " + ebayItemDetails.ConvertedCurrentPrice.CurrencyID;
+            FindViewById<TextView>(Resource.Id.title).Click += delegate {
+                var uri = global::Android.Net.Uri.Parse(ebayItemDetails.ViewItemURLForNaturalSearch);
+                var intent = new Intent(Intent.ActionView, uri);
+                StartActivity(intent);
+            };
+            FindViewById<TextView>(Resource.Id.buyButton).Click += delegate {
+                var uri = global::Android.Net.Uri.Parse(ebayItemDetails.ViewItemURLForNaturalSearch);
+                var intent = new Intent(Intent.ActionView, uri);
+                StartActivity(intent);
+            };
+
+            string currency = ebayItemDetails.ConvertedCurrentPrice.CurrencyID + " ";
+            if (currency == "GBP ")
+            {
+                currency = "£";
+            }
+            FindViewById<TextView>(Resource.Id.price).Text = currency + ebayItemDetails.ConvertedCurrentPrice.Value;
 
             if (imageBitmap != null)
             {

@@ -2,4 +2,11 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">XamarinApp.Android</string>
+    <string name="description">Description:</string>
+    <string name="price">Price:</string>
+    <string name="endtime">End Time:</string>
+    <string name="specifications">Product specifics</string>
+    <string name="title">Title:</string>
+    <string name="text">Text:</string>
+    <string name="quantity">Quantity:</string>
 </resources>

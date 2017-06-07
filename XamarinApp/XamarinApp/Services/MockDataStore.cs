@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using eBayDetailModels;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,17 +13,21 @@ namespace XamarinApp.Services
 {
     public class MockDataStore : IDataStore
     {
-		public eBayItems GetItem(string id)
+		public eBayDetailModels.Item GetItem(string id)
 		{
-            var items = new List<eBayItems>();
-            //TODO
-            //return items.FirstOrDefault(s => s.id == id);
-            return items.FirstOrDefault();
-		}
+            var item = new eBayDetailModels.Item();
+            string requestUrl = "http://open.api.ebay.com/shopping?callname=GetSingleItem&responseencoding=JSON&appid=Renaldas-e418-4e39-aab0-56f374ef9297&siteid=3&version=515&IncludeSelector=Compatibility,ItemSpecifics,%20Description&ItemID=" + id;
+
+            WebClient client = new WebClient();
+            var contents = client.DownloadString(requestUrl);
+
+            var result = JsonConvert.DeserializeObject<RootObject>(contents);
+
+            return result.Item;
+        }
 
         public List<eBayItem> GetItems(bool forceRefresh = false)
         {
-
             string appId = AppConfig.GetEBayAppName();
 
             var items = new List<eBayItem>();

@@ -6,7 +6,7 @@ namespace XamarinApp.Services
 {
 	public interface IDataStore
     {
-        eBayItems GetItem(string id);
+        eBayDetailModels.Item GetItem(string id);
         List<eBayItem> GetItems(bool forceRefresh = false);
     }
 }
